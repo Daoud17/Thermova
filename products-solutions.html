@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products & Solutions | Thermova Lebanon</title>
+
+    <meta name="description"
+        content="Explore Thermova Lebanon's heat pumps, ventilation, domestic hot water, room heating, water filtration and engineering solutions.">
+
+    <link rel="icon" type="image/png" href="assets/img/thermova-logo.png">
+    <link rel="apple-touch-icon" href="assets/img/thermova-logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* =========================================
+           PRODUCTS PAGE - TEXT-BASED DESIGN
+           All styles are scoped to this page.
+        ========================================= */
+
+        .products-text-page {
+            --product-navy: #06234c;
+            --product-blue: #0879e8;
+            --product-orange: #ff650f;
+            --product-muted: #64748b;
+            --product-border: #e5ebf3;
+            --product-light: #f6f9fd;
+            color: #172333;
+        }
+
+        .products-text-page section[id],
+        .products-text-page div[id] {
+            scroll-margin-top: 30px;
+        }
+
+        .products-text-page .product-container {
+            width: min(1320px, calc(100% - 70px));
+            margin-inline: auto;
+        }
+
+        .products-text-page .product-section {
+            padding: 100px 0;
+        }
+
+        .products-text-page .product-section.alt {
+            background: var(--product-light);
+        }
+
+        .products-text-page .product-eyebrow {
+            display: inline-block;
+            margin-bottom: 17px;
+            color: var(--product-orange);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .products-text-page .product-heading {
+            max-width: 780px;
+            margin-bottom: 45px;
+        }
+
+        .products-text-page .product-heading.centered {
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        .products-text-page .product-heading h2 {
+            margin-bottom: 18px;
+            color: var(--product-navy);
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 800;
+            letter-spacing: -1.8px;
+            line-height: 1.16;
+        }
+
+        .products-text-page .product-heading h2 span {
+            color: var(--product-blue);
+        }
+
+        .products-text-page .product-heading p,
+        .products-text-page .product-copy p {
+            color: var(--product-muted);
+            font-size: 15px;
+            line-height: 1.95;
+        }
+
+        /* Category navigation */
+
+        .products-text-page .product-category-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 55px;
+        }
+
+        .products-text-page .product-category-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 19px;
+            border: 1px solid var(--product-border);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--product-navy);
+            font-size: 12px;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .products-text-page .product-category-nav a:hover,
+        .products-text-page .product-category-nav a:focus-visible {
+            border-color: var(--product-blue);
+            background: var(--product-navy);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .products-text-page .product-category-nav svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        /* Intro feature */
+
+        .products-text-page .product-feature {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 60px;
+            align-items: center;
+            padding: 55px;
+            border-radius: 18px;
+            background: var(--product-navy);
+            color: white;
+        }
+
+        .products-text-page .product-feature h3 {
+            margin: 0 0 22px;
+            font-size: clamp(29px, 3.5vw, 45px);
+            line-height: 1.2;
+            letter-spacing: -1.3px;
+        }
+
+        .products-text-page .product-feature h3 span {
+            color: #77c3ff;
+        }
+
+        .products-text-page .product-feature p {
+            margin-bottom: 17px;
+            color: #d6e2f1;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .products-text-page .product-feature-label {
+            display: block;
+            margin-bottom: 17px;
+            color: #ff9a62;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.7px;
+        }
+
+        .products-text-page .product-benefits {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .products-text-page .product-benefit {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 19px;
+            border: 1px solid rgba(255, 255, 255, .16);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, .06);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .products-text-page .product-benefit svg {
+            flex-shrink: 0;
+            width: 21px;
+            height: 21px;
+            color: #ff985f;
+        }
+
+        /* Information cards */
+
+        .products-text-page .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .products-text-page .product-grid.two {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .products-text-page .product-grid.four {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .products-text-page .product-card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 35px 30px;
+            border: 1px solid var(--product-border);
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 8px 30px rgba(6, 35, 76, .035);
+            transition: transform .3s ease, box-shadow .3s ease,
+                border-color .3s ease;
+        }
+
+        .products-text-page .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #c5d9ef;
+            box-shadow: 0 18px 40px rgba(6, 35, 76, .09);
+        }
+
+        .products-text-page .product-card-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            margin-bottom: 26px;
+            border-radius: 12px;
+            background: #eaf4ff;
+            color: var(--product-blue);
+        }
+
+        .products-text-page .product-card-icon svg {
+            width: 25px;
+            height: 25px;
+            stroke-width: 1.8;
+        }
+
+        .products-text-page .product-card-number {
+            display: block;
+            margin-bottom: 14px;
+            color: var(--product-orange);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .products-text-page .product-card h3 {
+            margin-bottom: 17px;
+            color: var(--product-navy);
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -.6px;
+            line-height: 1.4;
+        }
+
+        .products-text-page .product-card p {
+            margin-bottom: 16px;
+            color: var(--product-muted);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .products-text-page .product-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .products-text-page .product-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            margin-top: auto;
+            padding-top: 23px;
+            color: var(--product-blue);
+            font-size: 12px;
+            font-weight: 800;
+            line-height: 1.5;
+            transition: color .2s ease;
+        }
+
+        .products-text-page .product-card-link:hover {
+            color: var(--product-orange);
+        }
+
+        .products-text-page .product-card-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Text information blocks */
+
+        .products-text-page .product-info-block {
+            margin-top: 70px;
+        }
+
+        .products-text-page .product-info-block h3 {
+            margin-bottom: 15px;
+            color: var(--product-navy);
+            font-size: clamp(25px, 3vw, 36px);
+            letter-spacing: -1px;
+        }
+
+        .products-text-page .product-info-block>p {
+            max-width: 850px;
+            margin-bottom: 30px;
+            color: var(--product-muted);
+            font-size: 14px;
+            line-height: 1.95;
+        }
+
+        .products-text-page .product-text-panel {
+            padding: 34px;
+            border-left: 4px solid var(--product-orange);
+            border-radius: 0 12px 12px 0;
+            background: #f2f7fd;
+        }
+
+        .products-text-page .product-text-panel p {
+            margin-bottom: 14px;
+            color: #43556d;
+            font-size: 14px;
+            line-height: 1.95;
+        }
+
+        .products-text-page .product-text-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Steps */
+
+        .products-text-page .product-step {
+            padding: 28px;
+            border: 1px solid var(--product-border);
+            border-radius: 12px;
+            background: white;
+        }
+
+        .products-text-page .product-step-number {
+            display: block;
+            margin-bottom: 20px;
+            color: var(--product-orange);
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .products-text-page .product-step svg {
+            width: 25px;
+            height: 25px;
+            margin-bottom: 18px;
+            color: var(--product-blue);
+        }
+
+        .products-text-page .product-step h3 {
+            margin-bottom: 12px;
+            color: var(--product-navy);
+            font-size: 17px;
+        }
+
+        .products-text-page .product-step p {
+            color: var(--product-muted);
+            font-size: 12px;
+            line-height: 1.85;
+        }
+
+        /* CTA */
+
+        .products-text-page .product-cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            margin-top: 65px;
+            padding: 45px 50px;
+            border-radius: 15px;
+            background: var(--product-navy);
+            color: white;
+        }
+
+        .products-text-page .product-cta span {
+            display: block;
+            margin-bottom: 12px;
+            color: #ff995e;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+        }
+
+        .products-text-page .product-cta h3 {
+            margin-bottom: 12px;
+            color: white;
+            font-size: clamp(22px, 2.5vw, 31px);
+            letter-spacing: -.8px;
+        }
+
+        .products-text-page .product-cta p {
+            max-width: 670px;
+            color: #d6e2f1;
+            font-size: 13px;
+            line-height: 1.85;
+        }
+
+        .products-text-page .product-cta a,
+        .products-text-page .product-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-shrink: 0;
+            padding: 16px 23px;
+            border-radius: 8px;
+            background: var(--product-orange);
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+            transition: background .25s ease, transform .25s ease;
+        }
+
+        .products-text-page .product-cta a:hover,
+        .products-text-page .product-button:hover {
+            background: #e4550b;
+            transform: translateY(-2px);
+        }
+
+        .products-text-page .product-cta a svg,
+        .products-text-page .product-button svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        /* Engineering notes */
+
+        .products-text-page .product-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 8px;
+            background: #f0f6fc;
+            color: #43556d;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .products-text-page .product-note svg {
+            flex-shrink: 0;
+            width: 19px;
+            height: 19px;
+            color: var(--product-blue);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 1100px) {
+
+            .products-text-page .product-grid,
+            .products-text-page .product-grid.four {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .products-text-page .product-feature {
+                gap: 35px;
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .products-text-page .product-container {
+                width: calc(100% - 36px);
+            }
+
+            .products-text-page .product-section {
+                padding: 65px 0;
+            }
+
+            .products-text-page .product-heading {
+                margin-bottom: 32px;
+            }
+
+            .products-text-page .product-category-nav {
+                gap: 9px;
+                margin-bottom: 35px;
+            }
+
+            .products-text-page .product-category-nav a {
+                padding: 12px 13px;
+                font-size: 11px;
+            }
+
+            .products-text-page .product-feature {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 30px 24px;
+            }
+
+            .products-text-page .product-grid,
+            .products-text-page .product-grid.two,
+            .products-text-page .product-grid.four {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+            .products-text-page .product-card {
+                padding: 28px 24px;
+            }
+
+            .products-text-page .product-benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .products-text-page .product-info-block {
+                margin-top: 45px;
+            }
+
+            .products-text-page .product-cta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
+                margin-top: 45px;
+                padding: 30px 24px;
+            }
+
+            .products-text-page .product-cta a {
+                width: 100%;
+            }
+
+            .products-text-page .product-text-panel {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .products-text-page *,
+            .products-text-page *::before,
+            .products-text-page *::after {
+                transition: none !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="site-logo" aria-label="Thermova Lebanon Homepage">
+                <img src="assets/img/thermova-logo.png" alt="Thermova Lebanon">
+            </a>
+
+            <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products-solutions.html" class="nav-link active" aria-current="page">
+                            Products &amp; Solutions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html" class="nav-link">
+                            Our Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-navigation"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main id="main-content" class="products-text-page">
+
+        <!-- =========================================
+             PRODUCTS & SOLUTIONS HERO
+             Existing CSS background uses .png
+        ========================================= -->
+
+        <section class="products-page-hero" aria-labelledby="products-hero-title">
+
+            <div class="products-hero-background" aria-hidden="true"></div>
+
+            <div class="products-hero-overlay" aria-hidden="true"></div>
+
+            <div class="products-hero-container">
+                <div class="products-hero-content">
+
+                    <span class="products-hero-eyebrow">
+                        THERMOVA LEBANON
+                    </span>
+
+                    <h1 id="products-hero-title">
+                        Innovative Products.<br>
+                        <span>Smarter Solutions.</span>
+                    </h1>
+
+                    <p>
+                        Discover modern heating, cooling, and
+                        hot water technologies designed to
+                        deliver reliable performance, greater
+                        efficiency, and year-round comfort
+                        for your home or business.
+                    </p>
+
+                    <div class="products-hero-accent" aria-hidden="true"></div>
+
+                </div>
+            </div>
+
+            <div class="products-hero-bottom-line" aria-hidden="true"></div>
+
+        </section>
+
+        <!-- =========================================
+             HEAT PUMPS & VENTILATION
+        ========================================= -->
+
+        <section class="product-section" id="heat-pumps">
+            <div class="product-container">
+
+                <div class="product-heading">
+                    <span class="product-eyebrow">
+                        OUR PRODUCTS & SOLUTIONS
+                    </span>
+
+                    <h2>Discover Our <span>Solutions</span></h2>
+
+                    <p>
+                        Explore efficient technologies designed
+                        to improve comfort in residential and
+                        commercial spaces.
+                    </p>
+                </div>
+
+                <!-- PRODUCT CATEGORY NAVIGATION -->
+
+                <nav class="product-category-nav" aria-label="Product categories">
+
+                    <a href="#heat-pumps">
+                        Heat Pumps & Ventilation
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a href="#domestic-hot-water">
+                        Domestic Hot Water
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a href="#room-heating">
+                        Room Heating
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a href="#water-filter">
+                        Water Filter
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a href="#information-engineering">
+                        Information & Engineering
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </nav>
+
+                <!-- HEAT PUMP INTRODUCTION -->
+
+                <div class="product-feature">
+
+                    <div>
+                        <span class="product-feature-label">
+                            HEAT PUMPS & VENTILATION
+                        </span>
+
+                        <h3>
+                            Smarter Heating.<br>
+                            <span>Better Living.</span>
+                        </h3>
+
+                        <p>
+                            Heat pumps provide an efficient
+                            way to heat and cool your space
+                            by transferring thermal energy
+                            instead of generating heat
+                            through conventional combustion.
+                        </p>
+
+                        <p>
+                            At Thermova Lebanon, we focus
+                            on modern heat pump solutions
+                            designed to support indoor comfort,
+                            energy efficiency, and reliable
+                            performance throughout the year.
+                        </p>
+                    </div>
+
+                    <div class="product-benefits">
+
+                        <div class="product-benefit">
+                            <i data-lucide="leaf"></i>
+                            Energy Efficiency
+                        </div>
+
+                        <div class="product-benefit">
+                            <i data-lucide="sun-snow"></i>
+                            Year-Round Comfort
+                        </div>
+
+                        <div class="product-benefit">
+                            <i data-lucide="house"></i>
+                            Modern Home Solutions
+                        </div>
+
+                        <div class="product-benefit">
+                            <i data-lucide="shield-check"></i>
+                            Reliable Performance
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FUTUREPROOF YOUR HOME -->
+
+                <div class="product-info-block" id="heat-futureproof">
+                    <span class="product-eyebrow">
+                        SMARTER HOME COMFORT
+                    </span>
+
+                    <h3>Futureproof Your Home</h3>
+
+                    <div class="product-text-panel">
+                        <p>
+                            Heat pumps use thermal energy
+                            available in the surrounding air,
+                            ground, or water to provide efficient
+                            heating and, with suitable systems,
+                            cooling for your home.
+                        </p>
+
+                        <p>
+                            Whether you're building a new property
+                            or upgrading an existing one, heat pump
+                            technology offers a modern approach
+                            to indoor comfort.
+                        </p>
+
+                        <p>
+                            Choosing the right system depends
+                            on your property's requirements,
+                            available space, and installation
+                            conditions.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             WHY CHOOSE HEAT PUMPS?
+        ========================================= -->
+
+        <section class="product-section alt" id="heat-reasons">
+            <div class="product-container">
+
+                <div class="product-heading centered">
+                    <span class="product-eyebrow">
+                        THE ADVANTAGES
+                    </span>
+
+                    <h2>Why Choose <span>Heat Pumps?</span></h2>
+
+                    <p>
+                        Discover how modern heat pump
+                        technology can improve comfort
+                        while supporting efficient energy use.
+                    </p>
+                </div>
+
+                <div class="product-grid four">
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <h3>Reliable Performance</h3>
+
+                        <p>
+                            Modern heat pumps are engineered
+                            for dependable heating and cooling
+                            performance. With appropriate
+                            system selection, professional
+                            installation, and regular
+                            maintenance, they can provide
+                            consistent indoor comfort
+                            over many years.
+                        </p>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="leaf"></i>
+                        </div>
+
+                        <h3>Energy Efficiency</h3>
+
+                        <p>
+                            Heat pumps transfer thermal
+                            energy from their surroundings.
+                            This approach can reduce energy
+                            consumption compared with
+                            conventional heating systems,
+                            depending on operating conditions.
+                        </p>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="house-plus"></i>
+                        </div>
+
+                        <h3>Flexible Applications</h3>
+
+                        <p>
+                            Heat pump technology can be
+                            adapted to residential and
+                            commercial applications,
+                            including heating, cooling,
+                            and domestic hot water.
+                        </p>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="wrench"></i>
+                        </div>
+
+                        <h3>Professional Guidance</h3>
+
+                        <p>
+                            Selecting the right heat pump
+                            involves understanding the
+                            building, required capacity,
+                            climate conditions, and
+                            installation environment.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             HEAT PUMP TECHNOLOGIES
+        ========================================= -->
+
+        <section class="product-section" id="heat-technology">
+            <div class="product-container">
+
+                <div class="product-heading">
+                    <span class="product-eyebrow">
+                        MODERN TECHNOLOGY
+                    </span>
+
+                    <h2>
+                        Comfort Through
+                        <span>Heat Pump Technology</span>
+                    </h2>
+
+                    <p>
+                        Explore common heat pump technologies
+                        and discover how they can support
+                        comfortable, energy-efficient living.
+                    </p>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="wind"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            01 / AIR SOURCE
+                        </span>
+
+                        <h3>Air Source Heat Pumps</h3>
+
+                        <p>
+                            Air source heat pumps extract
+                            thermal energy from the outdoor
+                            air to provide efficient indoor
+                            heating. Depending on the system,
+                            they can also provide cooling
+                            and domestic hot water.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="mountain"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            02 / GROUND SOURCE
+                        </span>
+
+                        <h3>Ground Source Heat Pumps</h3>
+
+                        <p>
+                            Ground source heat pumps use
+                            thermal energy stored beneath
+                            the Earth's surface. They can
+                            provide efficient heating and
+                            cooling, although installation
+                            requires suitable ground conditions.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="droplets"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            03 / HOT WATER
+                        </span>
+
+                        <h3>Domestic Hot Water Heat Pumps</h3>
+
+                        <p>
+                            Domestic hot water heat pumps
+                            use heat from surrounding air
+                            to warm water for everyday
+                            household use. They provide
+                            an efficient alternative to
+                            conventional electric water heating.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- FINDING THE RIGHT SYSTEM -->
+
+                <div class="product-info-block" id="heat-finding">
+                    <span class="product-eyebrow">
+                        FIND YOUR SOLUTION
+                    </span>
+
+                    <h3>Finding the Right Heat Pump</h3>
+
+                    <p>
+                        Every property has different heating
+                        and cooling requirements. The ideal
+                        heat pump depends on building size,
+                        insulation, existing heating
+                        infrastructure, available installation
+                        space, and comfort preferences.
+                    </p>
+
+                    <a href="contact.html#contact-form" class="product-button">
+                        Request Assistance
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             HOW DOES A HEAT PUMP WORK?
+        ========================================= -->
+
+        <section class="product-section alt" id="heat-explained">
+            <div class="product-container">
+
+                <div class="product-heading centered">
+                    <span class="product-eyebrow">
+                        UNDERSTANDING HEAT PUMPS
+                    </span>
+
+                    <h2>
+                        How Does a
+                        <span>Heat Pump Work?</span>
+                    </h2>
+
+                    <p>
+                        A heat pump moves thermal energy
+                        from one location to another
+                        using a refrigeration cycle.
+                    </p>
+                </div>
+
+                <div class="product-grid four">
+
+                    <div class="product-step">
+                        <span class="product-step-number">01</span>
+                        <i data-lucide="wind"></i>
+                        <h3>Energy Collection</h3>
+                        <p>
+                            The system absorbs thermal
+                            energy from the air,
+                            ground, or water.
+                        </p>
+                    </div>
+
+                    <div class="product-step">
+                        <span class="product-step-number">02</span>
+                        <i data-lucide="gauge"></i>
+                        <h3>Compression</h3>
+                        <p>
+                            A compressor increases
+                            the refrigerant's pressure
+                            and temperature.
+                        </p>
+                    </div>
+
+                    <div class="product-step">
+                        <span class="product-step-number">03</span>
+                        <i data-lucide="thermometer-sun"></i>
+                        <h3>Heat Transfer</h3>
+                        <p>
+                            The collected heat is
+                            transferred into the
+                            building's heating system.
+                        </p>
+                    </div>
+
+                    <div class="product-step">
+                        <span class="product-step-number">04</span>
+                        <i data-lucide="refresh-cw"></i>
+                        <h3>Continuous Cycle</h3>
+                        <p>
+                            Refrigerant pressure is
+                            reduced and the cycle
+                            begins again.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="product-cta" id="heat-products">
+                    <div>
+                        <span>EXPLORE OUR PRODUCTS</span>
+
+                        <h3>
+                            Interested in Our Heat Pump Solutions?
+                        </h3>
+
+                        <p>
+                            Looking for detailed specifications
+                            or technical documentation?
+                            Contact Thermova Lebanon to request
+                            the relevant product information PDF.
+                        </p>
+                    </div>
+
+                    <a href="contact.html#contact-form">
+                        Request Product PDF
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             ADDITIONAL HEATING SOLUTIONS
+        ========================================= -->
+
+        <section class="product-section" id="additional-solutions">
+            <div class="product-container">
+
+                <div class="product-heading">
+                    <span class="product-eyebrow">
+                        HEAT PUMPS & VENTILATION
+                    </span>
+
+                    <h2>
+                        Complete Solutions for
+                        <span>Modern Comfort</span>
+                    </h2>
+
+                    <p>
+                        Beyond heat pumps, explore
+                        complementary technologies
+                        designed to support efficient
+                        heating, improved indoor air
+                        quality, and intelligent
+                        energy management.
+                    </p>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card" id="system-cylinders">
+                        <div class="product-card-icon">
+                            <i data-lucide="cylinder"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            01 / SYSTEM SOLUTIONS
+                        </span>
+
+                        <h3>System Cylinders</h3>
+
+                        <p>
+                            System cylinders store heated
+                            water and support efficient
+                            heat distribution.
+                        </p>
+
+                        <p>
+                            When combined with compatible
+                            heat pumps, suitable storage
+                            cylinders can help balance
+                            heating demand and improve
+                            system operation.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card" id="ventilation-systems">
+                        <div class="product-card-icon">
+                            <i data-lucide="fan"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            02 / INDOOR AIR QUALITY
+                        </span>
+
+                        <h3>Ventilation Systems</h3>
+
+                        <p>
+                            Modern ventilation systems
+                            help replace stale indoor
+                            air with fresh outdoor air.
+                        </p>
+
+                        <p>
+                            Depending on the system,
+                            heat recovery technology
+                            can reduce ventilation-related
+                            heat losses while supporting
+                            indoor air quality.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card" id="energy-management">
+                        <div class="product-card-icon">
+                            <i data-lucide="sliders-horizontal"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            03 / SMART TECHNOLOGY
+                        </span>
+
+                        <h3>Control Units & Energy Management</h3>
+
+                        <p>
+                            Intelligent control technology
+                            helps heating and cooling systems
+                            operate according to building
+                            requirements and user preferences.
+                        </p>
+
+                        <p>
+                            Compatible systems may support
+                            temperature scheduling,
+                            monitoring, and coordination
+                            with renewable electricity.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             DOMESTIC HOT WATER
+        ========================================= -->
+
+        <section class="product-section alt" id="domestic-hot-water">
+            <div class="product-container">
+
+                <div class="product-heading">
+                    <span class="product-eyebrow">
+                        THERMOVA PRODUCTS & SOLUTIONS
+                    </span>
+
+                    <h2>
+                        Domestic <span>Hot Water</span>
+                    </h2>
+
+                    <p>
+                        Discover practical hot water
+                        solutions designed to bring
+                        convenience, comfort, and
+                        efficiency to everyday living.
+                        Explore technologies for heating,
+                        storing, and delivering hot water.
+                    </p>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            01 / WATER HEATING
+                        </span>
+
+                        <h3>Instantaneous Water Heaters</h3>
+
+                        <p>
+                            Instantaneous water heaters
+                            provide hot water on demand
+                            without requiring a large
+                            storage tank. Their compact
+                            design makes them suitable
+                            for bathrooms, kitchens,
+                            and selected commercial
+                            applications.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            02 / HOT WATER STORAGE
+                        </span>
+
+                        <h3>Small Water Heaters & Storage Cylinders</h3>
+
+                        <p>
+                            Storage water heaters keep
+                            heated water ready for use.
+                            Different capacities and
+                            installation configurations
+                            can serve individual fixtures
+                            or multiple hot water outlets.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="coffee"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            03 / BOILING WATER
+                        </span>
+
+                        <h3>Water Boilers</h3>
+
+                        <p>
+                            Water boilers provide
+                            convenient access to hot
+                            or near-boiling water.
+                            Compact solutions can be
+                            useful in kitchens, offices,
+                            and other spaces where hot
+                            water is frequently required.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="thermometer-sun"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            04 / EFFICIENT TECHNOLOGY
+                        </span>
+
+                        <h3>Domestic Hot Water Heat Pumps</h3>
+
+                        <p>
+                            Domestic hot water heat pumps
+                            use thermal energy from
+                            surrounding air to heat
+                            stored water. This technology
+                            can offer an energy-efficient
+                            alternative to conventional
+                            electric water heating.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="hand"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            05 / WASHROOM SOLUTIONS
+                        </span>
+
+                        <h3>Hand Dryers</h3>
+
+                        <p>
+                            Electric hand dryers offer
+                            a convenient way to dry
+                            hands in public and
+                            commercial washrooms.
+                            They provide a practical
+                            alternative to disposable
+                            paper towels in suitable
+                            facilities.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="droplets"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            06 / WATER ACCESSORIES
+                        </span>
+
+                        <h3>Taps & Water Accessories</h3>
+
+                        <p>
+                            Suitable taps and fittings
+                            support convenient water
+                            delivery in bathrooms,
+                            kitchens, and commercial
+                            environments. Choosing
+                            compatible accessories
+                            helps ensure proper
+                            operation and usability.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                </div>
+
+                <div class="product-cta">
+                    <div>
+                        <span>NEED PRODUCT DETAILS?</span>
+
+                        <h3>
+                            Find the Right Hot Water Solution
+                        </h3>
+
+                        <p>
+                            Interested in specifications,
+                            available models, or technical
+                            documentation? Request the
+                            relevant product PDF.
+                        </p>
+                    </div>
+
+                    <a href="contact.html#contact-form">
+                        Request Product PDF
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             ROOM HEATING
+        ========================================= -->
+
+        <section class="product-section" id="room-heating">
+            <div class="product-container">
+
+                <div class="product-heading">
+                    <span class="product-eyebrow">
+                        THERMOVA PRODUCTS & SOLUTIONS
+                    </span>
+
+                    <h2>Room <span>Heating</span></h2>
+
+                    <p>
+                        Discover practical electric heating
+                        solutions designed to bring warmth,
+                        comfort, and convenient temperature
+                        control to living spaces.
+                    </p>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="heater"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            01 / ELECTRIC HEATING
+                        </span>
+
+                        <h3>Electric Heating Appliances</h3>
+
+                        <p>
+                            Electric heating appliances
+                            provide convenient warmth
+                            for individual rooms.
+                            Depending on the model,
+                            they can be wall-mounted
+                            or portable, making them
+                            suitable for bedrooms,
+                            bathrooms, living rooms,
+                            and offices.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="battery-charging"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            02 / HEAT STORAGE
+                        </span>
+
+                        <h3>Storage Heaters</h3>
+
+                        <p>
+                            Storage heaters accumulate
+                            thermal energy and release
+                            it gradually to maintain
+                            indoor warmth. They can
+                            be practical where electricity
+                            tariffs make scheduled
+                            heat storage beneficial.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="thermometer"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            03 / SMART CONTROL
+                        </span>
+
+                        <h3>Heating Controllers</h3>
+
+                        <p>
+                            Heating controllers regulate
+                            indoor temperatures and
+                            manage electric heating
+                            appliances. Depending on
+                            compatibility, features
+                            may include schedules,
+                            frost protection, and
+                            energy-saving settings.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                </div>
+
+                <div class="product-cta">
+                    <div>
+                        <span>NEED PRODUCT DETAILS?</span>
+
+                        <h3>
+                            Find the Right Heating Solution
+                        </h3>
+
+                        <p>
+                            Contact Thermova Lebanon
+                            to request information about
+                            suitable room heating systems,
+                            available models, and
+                            technical specifications.
+                        </p>
+                    </div>
+
+                    <a href="contact.html#contact-form">
+                        Request Product PDF
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             WATER FILTRATION
+        ========================================= -->
+
+        <section class="product-section alt" id="water-filter">
+            <div class="product-container">
+
+                <div class="product-heading">
+                    <span class="product-eyebrow">
+                        THERMOVA PRODUCTS & SOLUTIONS
+                    </span>
+
+                    <h2>
+                        Water <span>Filtration</span>
+                    </h2>
+
+                    <p>
+                        Explore practical water filtration
+                        solutions designed to improve
+                        drinking water quality and bring
+                        greater convenience to everyday life.
+                    </p>
+                </div>
+
+                <div class="product-grid two">
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="glass-water"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            01 / WATER FILTRATION
+                        </span>
+
+                        <h3>Drinking Water Filters</h3>
+
+                        <p>
+                            Drinking water filtration
+                            systems help improve water
+                            quality by reducing specific
+                            impurities, depending on the
+                            filtration technology and
+                            cartridge used.
+                        </p>
+
+                        <p>
+                            Suitable for residential
+                            kitchens and selected
+                            commercial applications,
+                            these systems can provide
+                            convenient access to
+                            filtered water for
+                            everyday use.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="filter"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            02 / MAINTENANCE & ACCESSORIES
+                        </span>
+
+                        <h3>Replacement Cartridges & Accessories</h3>
+
+                        <p>
+                            Regular cartridge replacement
+                            is an important part of
+                            maintaining filtration system
+                            performance. Replacement
+                            intervals depend on the
+                            filter model, water conditions,
+                            and usage.
+                        </p>
+
+                        <p>
+                            Compatible cartridges and
+                            accessories help keep
+                            filtration systems operating
+                            as intended and support
+                            continued water treatment.
+                        </p>
+
+                        <a href="contact.html#contact-form" class="product-card-link">
+                            Request Product Information
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                </div>
+
+                <div class="product-cta">
+                    <div>
+                        <span>NEED PRODUCT DETAILS?</span>
+
+                        <h3>
+                            Find the Right Water Filtration Solution
+                        </h3>
+
+                        <p>
+                            Contact Thermova Lebanon to
+                            request information about
+                            available models, compatible
+                            cartridges, specifications,
+                            and product documentation.
+                        </p>
+                    </div>
+
+                    <a href="contact.html#contact-form">
+                        Request Product PDF
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             INFORMATION & ENGINEERING
+        ========================================= -->
+
+        <section class="product-section" id="information-engineering">
+            <div class="product-container">
+
+                <div class="product-heading">
+                    <span class="product-eyebrow">
+                        THERMOVA PRODUCTS & SOLUTIONS
+                    </span>
+
+                    <h2>
+                        Information & <span>Engineering</span>
+                    </h2>
+
+                    <p>
+                        Explore the technology, technical
+                        considerations, and engineering
+                        principles behind modern heating,
+                        cooling, and energy-efficient
+                        building solutions.
+                    </p>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="snowflake"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            01 / REFRIGERANT TECHNOLOGY
+                        </span>
+
+                        <h3>Refrigerant R454C</h3>
+
+                        <p>
+                            R454C is a refrigerant blend
+                            developed for selected
+                            refrigeration and heat pump
+                            applications. It has a lower
+                            global warming potential
+                            than several traditional
+                            refrigerants.
+                        </p>
+
+                        <p>
+                            R454C is classified as an
+                            A2L refrigerant, meaning
+                            lower toxicity and mild
+                            flammability under the
+                            applicable classification.
+                            Its use requires compatible
+                            equipment and appropriate
+                            safety procedures.
+                        </p>
+
+                        <div class="product-note">
+                            <i data-lucide="info"></i>
+                            <span>
+                                Refrigerant selection must
+                                follow equipment specifications
+                                and applicable safety standards.
+                            </span>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="building-2"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            02 / BUILDING SOLUTIONS
+                        </span>
+
+                        <h3>Real Estate Sector</h3>
+
+                        <p>
+                            Heating, cooling, ventilation,
+                            and hot water systems play
+                            an important role in the
+                            comfort and performance of
+                            residential and commercial
+                            properties.
+                        </p>
+
+                        <p>
+                            Integrating suitable technologies
+                            during planning can help optimize
+                            installation requirements,
+                            operating efficiency, and
+                            long-term building performance.
+                        </p>
+
+                        <div class="product-note">
+                            <i data-lucide="house"></i>
+                            <span>
+                                Applications include apartments,
+                                residential developments,
+                                offices, and commercial buildings.
+                            </span>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card-icon">
+                            <i data-lucide="clipboard-check"></i>
+                        </div>
+
+                        <span class="product-card-number">
+                            03 / ENGINEERING INSIGHTS
+                        </span>
+
+                        <h3>References</h3>
+
+                        <p>
+                            Successful heating and cooling
+                            projects begin with careful
+                            technical planning and
+                            appropriate equipment selection.
+                        </p>
+
+                        <p>
+                            Engineering references and
+                            application examples can help
+                            illustrate how different
+                            technologies are used in
+                            practice, from residential
+                            heat pump installations
+                            to integrated building
+                            comfort systems.
+                        </p>
+
+                        <div class="product-note">
+                            <i data-lucide="clipboard-list"></i>
+                            <span>
+                                Building requirements,
+                                system compatibility, and
+                                installation conditions
+                                influence the final solution.
+                            </span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <a href="index.html" aria-label="Thermova Lebanon Homepage">
+
+                    <img src="assets/img/thermova-logo.png" alt="Thermova Lebanon Logo">
+                </a>
+            </div>
+
+            <div class="footer-column footer-address">
+                <h3>Our Location</h3>
+
+                <div class="footer-info">
+                    <span class="footer-icon">
+                        <i data-lucide="map-pin"></i>
+                    </span>
+
+                    <p>
+                        Raouche, Abdallah Machnouk Street,<br>
+                        Darine Building, Ground Floor,<br>
+                        Beirut, Lebanon
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3>Get in Touch</h3>
+
+                <div class="footer-info">
+                    <span class="footer-icon">
+                        <i data-lucide="phone"></i>
+                    </span>
+
+                    <div class="footer-contact-links">
+                        <a href="tel:+9611369946">01/369946</a>
+                        <a href="tel:+9613451081">03/451081</a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <span class="footer-icon">
+                        <i data-lucide="mail"></i>
+                    </span>
+
+                    <a href="mailto:info@thermova-lb.com">
+                        info@thermova-lb.com
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js">
+    </script>
+
+    <script defer src="assets/js/app.js"></script>
+
+</body>
+
+</html>
